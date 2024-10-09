@@ -4,24 +4,32 @@ body {
 }
 
 .section {
+    
     background-color: white;
     text-align: center;
     margin-left: 600px;
-    margin-right: 600px;
+    margin-right: 600px;    
+
 
     position: relative;
     animation-name: bounce-in;
     animation-duration: 0.8s;
-    animation-timing-function: cubic-bezier(0, .96, .74, 1.5);
+    animation-timing-function: cubic-bezier(0,1.38,1,1.43);
+
 }
 
 @keyframes bounce-in {
     0% {
         transform: translateY(-300px);
+        opacity: 0;
     }
-
+    50%
+{
+    opacity: 0.5;
+}
     100% {
-        transform: translateY(50px);
+        transform: translateY(0px);
+        opacity: 1;
     }
 }
 
@@ -56,7 +64,7 @@ h1 {
     opacity: 0;
     animation-name: fade-text;
     animation-duration: 1s;
-    animation-delay: 1s;
+    animation-delay: 1.1s;
     animation-fill-mode: forwards;
 }
 
@@ -64,17 +72,16 @@ h1 {
 .cssButton {
     padding: 10px 15px;
     font-size: 20px;
-    border-radius: 5px;
     opacity: 0;
     animation-name: fade-text;
     animation-duration: 1.5s;
-    animation-delay: 1s;
+    animation-delay: 1.2s;
     animation-fill-mode: forwards;
 }
 
 .input {
     width: 350px;
-    margin-right: 6px;
+    margin-right: 6px;   
 }
 
 .cssButton {
@@ -82,3 +89,50 @@ h1 {
     font-size: 20px;
     font-weight: bold;
 }
+.listan {
+    font-family:Arial, sans-serif;
+        font-size: 40px;
+        list-style: none;
+    }
+
+   
+
+.deleteTask{
+    font-size: x-large;
+}
+
+
+    .completed {
+
+        text-decoration: line-through;
+        color: lightgrey;
+        
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .blink {
+        animation: blink 0.5s infinite;
+        
+    }
+
+      #infoText {
+        font-size: large;
+        font-family:Arial, Helvetica, sans-serif;
+        font-style: italic;
+        color: red;
+       
+      }
+ .hidden{
+    display: none;
+ }

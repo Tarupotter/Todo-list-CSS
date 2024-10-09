@@ -15,24 +15,36 @@ button.addEventListener("click", function () {
     const text = input.value;
     // if sats för att ge meddelande om användare inte skriver något i input.
     if (text.length == 0) {
-        infoText.innerText = "Du har inte skrivit något!";
+        infoText.classList.remove("hidden");
+        infoText.classList.add("blink");
+        infoText.innerText = "Input must not be empty!";
+        setTimeout(function(){ infoText.classList.remove("blink")}, 1000); // timer till info texten så den blinkar 2 sek.
         return;
+        
     }
     else {
-        infoText.innerText = "";
+        infoText.classList.add("hidden");
+        infoText.classList.remove("blink");
+        
     }
 
     //lägger till todos till listan
     const taskItem = document.createElement("li");
     list.appendChild(taskItem);
 
+    
+
     const itemLabel = document.createElement("span");
     itemLabel.innerText = text;
     taskItem.appendChild(itemLabel);
+    itemLabel.classList.add("style");
+    
+    
+    
 
     // Skapar en sopkorg
     const deleteTask = document.createElement("span");
-    deleteTask.innerHTML = "&#128465;"; //sopkorgens look
+    deleteTask.innerHTML = " 🗑️"; //sopkorgens look sätts in i texten
     deleteTask.setAttribute("class", "deleteTask");
     taskItem.appendChild(deleteTask);
 
