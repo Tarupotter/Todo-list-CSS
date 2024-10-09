@@ -4,17 +4,17 @@ body {
 }
 
 .section {
-    
+
     background-color: white;
     text-align: center;
     margin-left: 600px;
-    margin-right: 600px;    
-
+    margin-right: 600px;
+    box-shadow: 2px 2px 10px  #050505a4;
 
     position: relative;
     animation-name: bounce-in;
     animation-duration: 0.8s;
-    animation-timing-function: cubic-bezier(0,1.38,1,1.43);
+    animation-timing-function: cubic-bezier(0, 1.38, 1, 1.43);
 
 }
 
@@ -23,15 +23,17 @@ body {
         transform: translateY(-300px);
         opacity: 0;
     }
-    50%
-{
-    opacity: 0.5;
-}
+
+    50% {
+        opacity: 0.5;
+    }
+
     100% {
         transform: translateY(0px);
         opacity: 1;
     }
 }
+
 
 @keyframes fade-text {
     from {
@@ -81,7 +83,8 @@ h1 {
 
 .input {
     width: 350px;
-    margin-right: 6px;   
+    margin-right: 6px;
+
 }
 
 .cssButton {
@@ -89,50 +92,80 @@ h1 {
     font-size: 20px;
     font-weight: bold;
 }
+
 .listan {
-    font-family:Arial, sans-serif;
-        font-size: 40px;
-        list-style: none;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    list-style: none;
+}
+
+li {
+transition: 0.5s;
+animation: glideup;
+animation-duration: 0.3s;
+
+}
+
+@keyframes glideup {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
     }
 
-   
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
 
-.deleteTask{
+li:hover
+{
+   text-decoration-line: line-through;
+   text-decoration-thickness: 3px;
+}
+
+
+
+.deleteTask 
+{
     font-size: x-large;
 }
 
 
-    .completed {
+.completed {
 
-        text-decoration: line-through;
-        color: lightgrey;
-        
+    text-decoration: line-through;
+    color: lightgrey;
+
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
     }
 
-    @keyframes blink {
-        0% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
+    50% {
+        opacity: 0;
     }
 
-    .blink {
-        animation: blink 0.5s infinite;
-        
+    100% {
+        opacity: 1;
     }
+}
 
-      #infoText {
-        font-size: large;
-        font-family:Arial, Helvetica, sans-serif;
-        font-style: italic;
-        color: red;
-       
-      }
- .hidden{
+.blink {
+    animation: blink 0.5s infinite;
+
+}
+
+#infoText {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: red;
+
+}
+
+.hidden {
     display: none;
- }
+}
