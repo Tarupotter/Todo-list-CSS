@@ -17,7 +17,7 @@ button.addEventListener("click", function () {
     if (text.length == 0) {
         infoText.classList.remove("hidden");
         infoText.classList.add("blink");
-        infoText.innerText = "Input must not be empty!";
+        infoText.innerText = "Input must not be empty";
         setTimeout(function(){ infoText.classList.remove("blink")}, 1000); // timer till info texten så den blinkar 2 sek.
         return;
         
