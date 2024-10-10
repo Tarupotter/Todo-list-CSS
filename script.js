@@ -37,7 +37,7 @@ button.addEventListener("click", function () {
     const itemLabel = document.createElement("span");
     itemLabel.innerText = text;
     taskItem.appendChild(itemLabel);
-    itemLabel.classList.add("style");
+    itemLabel.classList.add("label");
     
     
     
